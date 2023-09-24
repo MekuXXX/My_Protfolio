@@ -1,29 +1,74 @@
 import AnimatedText from "@/components/AnimatedText";
+import HireMe from "@/components/HireMe";
+import { LinkArrow } from "@/components/Icons";
+import NavigateButton from "@/components/NavigateButton";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main className={"flex items-center w-full h-auto min-h-screen"}>
-      <div className={"container mx-auto flex items-center justify-between"}>
-        <div className={"w-1/2"}>
+      <div
+        className={
+          "container mx-auto flex items-center justify-between px-4 flex-col p-10 pb-2 lg:flex-row lg:py-0 lg:justify-center gap-4"
+        }
+      >
+        <div className={"w-3/4 lg:w-1/2"}>
           <Image
             src={"/images/profile/developer-pic-1.png"}
             alt={"Mohamed Ali"}
-            width={490}
-            height={490}
+            width={590}
+            height={590}
             className="w-full h-auto"
           />
         </div>
-        <div className={"w-1/2"}>
+        <div className={"w-full lg:w-1/2 text-center lg:text-left"}>
           <AnimatedText
             text={"Turning Vision Into Reality With Code And Design."}
-            className={"!text-5xl text-left"}
+            className={"!text-5xl"}
           />
-          <p>
+          <p className="my-4 text-base font-medium">
             As a skilled full-stack developer, I am dedicated to turning ideas
             into innovative web applications. Explore my latest projects and
             articles, showcasing my expertise in React.js and web development.
           </p>
+          <div>
+            <div
+              className={
+                "flex items-center justify-center lg:justify-start self-start gap-2"
+              }
+            >
+              <NavigateButton
+                path={"/CV.pdf"}
+                target={"_blank"}
+                text={"Resume"}
+                download={true}
+                classname={
+                  "text-lg font-semibold bg-dark text-light hover:bg-light hover:text-dark transition-[0.3s] border border-solid border-transparent hover:border-dark gap-2"
+                }
+                component={<LinkArrow width={"24"} height={"24"} />}
+              />
+              <NavigateButton
+                path={"mailto:xxx@gmail.com"}
+                text={"Contact Me"}
+                target={"_blank"}
+                classname={
+                  "text-lg font-medium capitalize border border-solid hover:underline underline-offset-[3px] hover:border-dark transition duration-main"
+                }
+              />
+            </div>
+          </div>
+        </div>
+        <HireMe />
+        <div className={"absolute right-8 bottom-8 hidden lg:inline-block"}>
+          <div className={"relative w-32 h-32"}>
+            <Image
+              src={"/images/svgs/miscellaneous_icons_1.svg"}
+              alt={"Bulb"}
+              fill={true}
+              className={"w-full h-auto object-contain"}
+            />
+          </div>
         </div>
       </div>
     </main>

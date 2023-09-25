@@ -1,11 +1,12 @@
 import AllMediaLinks from "./AllMediaLinks";
+import Container from "./Container";
 
 type Props = {};
 
 export default function Footer({}: Props) {
   return (
     <footer className="w-full border-t-[1px] border-solid border-dark">
-      <div className="container mx-auto p-4 flex items-center justify-between flex-col md:flex-row gap-2">
+      <Container classname="py-4 flex items-center justify-between flex-col md:flex-row gap-2">
         <div>
           {new Date(Date.now()).getFullYear()} &copy; All Right Reserved
         </div>
@@ -15,7 +16,7 @@ export default function Footer({}: Props) {
           <span className="text-lg font-medium">Mohamed Ali</span>
         </div>
         <AllMediaLinks />
-      </div>
+      </Container>
     </footer>
   );
 }

@@ -1,19 +1,14 @@
 import Logo from "./Logo";
 import CustomLink from "./CustomLink";
-import { PinterestIcon, GithubIcon, LinkedinIcon, TwitterIcon } from "./Icons";
-import MediaLink from "./MediaLink";
 import AllMediaLinks from "./AllMediaLinks";
+import Container from "./Container";
 
 type Props = {};
 
 export default function Navbar({}: Props) {
   return (
     <header className={"w-full text-dark"}>
-      <div
-        className={
-          "container mx-auto px-4 py-2 flex items-center font-medium gap-4"
-        }
-      >
+      <Container classname={"py-2 flex items-center font-medium gap-4"}>
         <div
           className={
             "flex justify-end flex-row-reverse md:flex-row md:justify-between items-center flex-grow gap-2"
@@ -31,7 +26,7 @@ export default function Navbar({}: Props) {
           <AllMediaLinks classname={"hidden md:flex"} />
         </div>
         <div className={""}>T</div>
-      </div>
+      </Container>
     </header>
   );
 }

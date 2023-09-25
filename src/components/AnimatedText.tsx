@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 type Props = {
   text: string;
-  className?: string;
+  classname?: string;
 };
 
 const SingleWordVariant = {
@@ -21,7 +21,7 @@ const SingleWordVariant = {
   },
 };
 
-export default function AnimatedText({ text, className }: Props) {
+export default function AnimatedText({ text, classname }: Props) {
   return (
     <div
       className={
@@ -35,7 +35,7 @@ export default function AnimatedText({ text, className }: Props) {
           delay: 0.5,
           staggerChildren: 0.08,
         }}
-        className={`inline-block w-full text-dark font-bold capitalize text-8xl ${className}`}
+        className={`inline-block w-full text-dark font-extrabold capitalize text-4xl md:text-6xl ${classname}`}
       >
         {text.split(" ").map((word, ind) => (
           <motion.span

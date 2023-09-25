@@ -1,4 +1,5 @@
 import AnimatedText from "@/components/AnimatedText";
+import Container from "@/components/Container";
 import HireMe from "@/components/HireMe";
 import { LinkArrow } from "@/components/Icons";
 import NavigateButton from "@/components/NavigateButton";
@@ -8,9 +9,9 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className={"flex items-center w-full h-auto min-h-screen"}>
-      <div
-        className={
-          "container mx-auto flex items-center justify-between px-4 flex-col p-10 pb-2 lg:flex-row lg:py-0 lg:justify-center gap-4"
+      <Container
+        classname={
+          "flex items-center justify-between flex-col p-10 pb-2 lg:flex-row lg:py-0 lg:justify-center gap-4"
         }
       >
         <div className={"w-3/4 lg:w-1/2"}>
@@ -25,7 +26,6 @@ export default function Home() {
         <div className={"w-full lg:w-1/2 text-center lg:text-left"}>
           <AnimatedText
             text={"Turning Vision Into Reality With Code And Design."}
-            className={"!text-5xl"}
           />
           <p className="my-4 text-base font-medium">
             As a skilled full-stack developer, I am dedicated to turning ideas
@@ -51,7 +51,6 @@ export default function Home() {
               <NavigateButton
                 path={"mailto:xxx@gmail.com"}
                 text={"Contact Me"}
-                target={"_blank"}
                 classname={
                   "text-lg font-medium capitalize border border-solid hover:underline underline-offset-[3px] hover:border-dark transition duration-main"
                 }
@@ -70,7 +69,7 @@ export default function Home() {
             />
           </div>
         </div>
-      </div>
+      </Container>
     </main>
   );
 }

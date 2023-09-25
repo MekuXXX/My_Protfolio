@@ -11,8 +11,8 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'circular-light': "repeating-radial-gradient(rgba(0,0,0,0.4) 1px,#f5f5f5 4px,#f5f5f5 40px);",
       },
       fontFamily: {
         mont: ['var(--font-mont)', ...fontFamily.sans]

@@ -8,6 +8,7 @@ import Skills from "@/components/Skills";
 import Divider from "@/components/Divider";
 import Experience from "@/components/Experience";
 import SectionHeading from "@/components/SectionHeading";
+import Education from "@/components/Education";
 
 type Props = {};
 
@@ -65,6 +66,8 @@ export default function About({}: Props) {
         <Skills />
         <Divider />
         <Experience />
+        <Divider />
+        <Education />
       </Container>
     </main>
   );

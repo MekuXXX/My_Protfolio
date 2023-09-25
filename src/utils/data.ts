@@ -37,49 +37,155 @@ export const AboutStats: StatsType[] = [
 
 export type ExperienceDataType = {
   id: number;
-  position: string;
-  company: string;
-  companyLink: string;
+  title: string;
+  place: string;
+  placeLink?: string;
   time: string;
   address: string;
-  work: string;
+  body: string;
 }
 
 export const ExperienceData: ExperienceDataType[] = [
   {
     id: 1,
-    position: "Software Engineer",
-    company: "Google",
-    companyLink: "https://google.com",
+    title: "Software Engineer",
+    place: "Google",
+    placeLink: "https://google.com",
     time: "2022-Present",
     address: "Mountain View, CA",
-    work: "Worked on a team responsible for developing new features for Google's search engine, including improving the accuracy and relevance of search results and developing new tools for data analysis and visualization."
+    body: "Worked on a team responsible for developing new features for Google's search engine, including improving the accuracy and relevance of search results and developing new tools for data analysis and visualization."
   },
   {
     id: 2,
-    position: "Intern",
-    company: "Facebook",
-    companyLink: "https://facebook.com/",
+    title: "Intern",
+    place: "Facebook",
+    placeLink: "https://facebook.com/",
     time: "Summer 2021",
     address: "Menlo Park, CA",
-    work: "Worked on a team responsible for developing a new mobile app feature that allowed users to create and share short-form video content, including designing and implementing a new user interface and developing the backend infrastructure to support the feature."
+    body: "Worked on a team responsible for developing a new mobile app feature that allowed users to create and share short-form video content, including designing and implementing a new user interface and developing the backend infrastructure to support the feature."
   },
   {
     id: 3,
-    position: "Software Developer",
-    company: "Amazon",
-    companyLink: "https://amazon.com/",
+    title: "Software Developer",
+    place: "Amazon",
+    placeLink: "https://amazon.com/",
     time: "2020-2021",
     address: "Seattle, WA",
-    work: "Worked on a team responsible for developing Amazon's mobile app, including implementing new features such as product recommendations and user reviews, and optimizing the app's performance and reliability."
+    body: "Worked on a team responsible for developing Amazon's mobile app, including implementing new features such as product recommendations and user reviews, and optimizing the app's performance and reliability."
   },
   {
     id:4,
-    position: "Teaching Assistant",
-    company: "MIT",
-    companyLink: "https://mit.edu/",
+    title: "Teaching Assistant",
+    place: "MIT",
+    placeLink: "https://mit.edu/",
     time: "Fall 2018",
     address: "Massachusetts Ave, Cambridge, MA",
-    work: "Assisted in teaching a course on computer programming, held office hours to help students with assignments, and graded exams and assignments."
+    body: "Assisted in teaching a course on computer programming, held office hours to help students with assignments, and graded exams and assignments."
   }
+]
+
+export const EducationData: ExperienceDataType[] = [
+  {
+    id: 1,
+    title: "Software Engineer",
+    place: "Google",
+    time: "2022-Present",
+    address: "Mountain View, CA",
+    body: "Worked on a team responsible for developing new features for Google's search engine, including improving the accuracy and relevance of search results and developing new tools for data analysis and visualization."
+  },
+  {
+    id: 2,
+    title: "Intern",
+    place: "Facebook",
+    time: "Summer 2021",
+    address: "Menlo Park, CA",
+    body: "Worked on a team responsible for developing a new mobile app feature that allowed users to create and share short-form video content, including designing and implementing a new user interface and developing the backend infrastructure to support the feature."
+  },
+  {
+    id: 3,
+    title: "Software Developer",
+    place: "Amazon",
+    time: "2020-2021",
+    address: "Seattle, WA",
+    body: "Worked on a team responsible for developing Amazon's mobile app, including implementing new features such as product recommendations and user reviews, and optimizing the app's performance and reliability."
+  },
+  {
+    id:4,
+    title: "Teaching Assistant",
+    place: "MIT",
+    time: "Fall 2018",
+    address: "Massachusetts Ave, Cambridge, MA",
+    body: "Assisted in teaching a course on computer programming, held office hours to help students with assignments, and graded exams and assignments."
+  }
+]
+
+
+// Projects 
+
+export type ProjectArrayType = {
+  id: number;
+  image: string;
+  type: string;
+  title: string;
+  description?: string;
+  link: string;
+  github?: string;
+}[];
+
+export const Projects: ProjectArrayType[] = 
+[
+  [
+    {
+      id: 1,
+      image: "/images/projects/crypto-screener-cover-image.jpg",
+      type: "Featured Project",
+      title: "Crypto Screener Application",
+      description: "CodeBucks is a web application that allows users to create and share short-form video content, including designing and implementing a new user interface and developing the backend infrastructure to support the feature.",
+      link: "https://codebucks.netlify.app/",
+      github: "https://github.com/codebucks/codebucks"
+    },
+    {
+      id: 2,
+      image: "/images/projects/nft-collection-website-cover-image.jpg",
+      type: "Website Template",
+      title: "NFT collection Website",
+      link: "https://codebucks.netlify.app/",
+      github: "https://github.com/codebucks/codebucks"
+    },
+    {
+      id: 3,
+      type: "Website",
+      image: "/images/projects/portfolio-cover-image.jpg",
+      title: "Fashion Studio Website",
+      link: "https://codebucks.netlify.app/",
+      github: "https://github.com/codebucks/codebucks"
+    },
+  ],
+  [
+    {
+      id: 1,
+      image: "/images/projects/crypto-screener-cover-image.jpg",
+      type: "Featured Project",
+      title: "Crypto Screener Application",
+      description: "CodeBucks is a web application that allows users to create and share short-form video content, including designing and implementing a new user interface and developing the backend infrastructure to support the feature.",
+      link: "https://codebucks.netlify.app/",
+      github: "https://github.com/codebucks/codebucks"
+    },
+    {
+      id: 2,
+      image: "/images/projects/nft-collection-website-cover-image.jpg",
+      type: "Website Template",
+      title: "NFT collection Website",
+      link: "https://codebucks.netlify.app/",
+      github: "https://github.com/codebucks/codebucks"
+    },
+    {
+      id: 3,
+      type: "Website",
+      image: "/images/projects/portfolio-cover-image.jpg",
+      title: "Fashion Studio Website",
+      link: "https://codebucks.netlify.app/",
+      github: "https://github.com/codebucks/codebucks"
+    },
+  ],
 ]

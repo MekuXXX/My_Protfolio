@@ -3,11 +3,12 @@ import { ReactNode } from "react";
 
 type Props = {
   path: string;
-  text: string;
+  text?: string;
   classname?: string;
   target?: string;
   download?: boolean;
   component?: ReactNode;
+  children?: ReactNode;
 };
 
 export default function NavigateButton({
@@ -17,6 +18,7 @@ export default function NavigateButton({
   download,
   classname,
   component,
+  children,
 }: Props) {
   return (
     <Link
@@ -25,8 +27,14 @@ export default function NavigateButton({
       target={target ? target : "_self"}
       download={download ? download : false}
     >
-      <span>{text}</span>
-      {component ? <span>{component}</span> : undefined}
+      {children ? (
+        children
+      ) : (
+        <>
+          <span>{text}</span>
+          {component ? <span>{component}</span> : undefined}
+        </>
+      )}
     </Link>
   );
 }

@@ -189,3 +189,35 @@ export const Projects: ProjectArrayType[] =
     },
   ],
 ]
+
+// Articles
+export type ArticlesCardType = {
+  id: number,
+  image: string,
+  title: string,
+  description: string,
+  link: string,
+  time: string,
+  willTake: string;
+}
+
+export const ArticlesData: ArticlesCardType[] = [
+  {
+    id: 1,
+    image: "/images/projects/crypto-screener-cover-image.jpg",
+    title: "Crypto Screener Application",
+    description: "Learn how to build a custom pagination component in ReactJS from scratch. Follow this step-by-step guide to integrate Pagination component in your ReactJS project.",
+    link: "https://codebucks.netlify.app/",
+    time: "January 28, 2023",
+    willTake: "9 min"
+  },
+  {
+    id: 2,
+    image: "/images/projects/crypto-screener-cover-image.jpg",
+    title: "Create loading screen",
+    description: "Learn how to create stunning loading screens in React with 3 different methods. Discover how to use React-Loading, React-Lottie & build a custom loading screen. Improve the user experience.",
+    link: "https://codebucks.netlify.app/",
+    time: "January 27, 2023",
+    willTake: "10 min"
+  },
+]

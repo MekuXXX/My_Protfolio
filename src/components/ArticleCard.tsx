@@ -19,7 +19,7 @@ export default function ArticleCard({
     <div className={classname}>
       <div
         className={
-          "relative min-h-[12rem] cursor-pointer overflow-hidden rounded-lg"
+          "relative min-h-[16rem] cursor-pointer overflow-hidden rounded-lg"
         }
       >
         <NavigateButton
@@ -37,18 +37,23 @@ export default function ArticleCard({
           />
         </NavigateButton>
       </div>
-      <div className={"pt-8"}>
+      <div className={"pt-8 min-h-[12rem] flex flex-col justify-between"}>
         <NavigateButton
           path={link}
           text={title}
+          target={"_blank"}
           classname={
-            "!justify-start !p-0 text-2xl font-semibold hover:underline"
+            "!justify-start !p-0 text-2xl !bg-transparent font-semibold !text-dark dark:!text-light"
           }
         />
-        <p className={"py-4 text-dark/75"}>{description}</p>
+        <p className={"py-4 text-dark/75 dark:text-light/75"}>{description}</p>
         <div className={"flex justify-between items-center"}>
-          <span className={"text-xl text-primary"}>{willTake} read</span>
-          <span className={"text-sm text-dark/50"}>{time}</span>
+          <span className={"text-xl text-primary dark:text-primaryDark"}>
+            {willTake} read
+          </span>
+          <span className={"text-sm text-dark/50 dark:text-light/50"}>
+            {time}
+          </span>
         </div>
       </div>
     </div>

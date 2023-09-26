@@ -3,12 +3,18 @@ import Container from "@/components/Container";
 import HireMe from "@/components/HireMe";
 import { LinkArrow } from "@/components/Icons";
 import NavigateButton from "@/components/NavigateButton";
+import TransitionEffect from "@/components/TransitionEffect";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className={"flex items-center w-full h-auto min-h-screen"}>
+    <main
+      className={
+        "flex dark:!bg-dark dark:!text-light items-center w-full h-auto min-h-screen"
+      }
+    >
+      <TransitionEffect />
       <Container
         classname={
           "flex items-center justify-between flex-col p-10 pb-2 lg:flex-row lg:py-0 lg:justify-center gap-4"
@@ -44,7 +50,7 @@ export default function Home() {
                 text={"Resume"}
                 download={true}
                 classname={
-                  "text-lg font-semibold bg-dark text-light hover:bg-light hover:text-dark transition-[0.3s] border border-solid border-transparent hover:border-dark gap-2"
+                  "text-lg font-semibold border border-solid border-transparent gap-2"
                 }
                 component={<LinkArrow width={"24"} height={"24"} />}
               />
@@ -52,13 +58,13 @@ export default function Home() {
                 path={"mailto:xxx@gmail.com"}
                 text={"Contact Me"}
                 classname={
-                  "text-lg font-medium capitalize border border-solid hover:underline underline-offset-[3px] hover:border-dark transition duration-main"
+                  "text-lg font-medium capitalize border border-solid !bg-transparent !text-dark dark:!text-light"
                 }
               />
             </div>
           </div>
         </div>
-        <HireMe />
+        {/* <HireMe /> */}
         <div className={"absolute right-8 bottom-8 hidden lg:inline-block"}>
           <div className={"relative w-32 h-32"}>
             <Image

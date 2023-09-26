@@ -1,7 +1,7 @@
 import AnimatedText from "@/components/AnimatedText";
 import Container from "@/components/Container";
 import Image from "next/image";
-import HelperClasses from "@/utils/helperClasses";
+
 import CouterStats from "@/components/CouterStats";
 import { Bio, AboutStats } from "@/utils/data";
 import Skills from "@/components/Skills";
@@ -9,12 +9,14 @@ import Divider from "@/components/Divider";
 import Experience from "@/components/Experience";
 import SectionHeading from "@/components/SectionHeading";
 import Education from "@/components/Education";
+import TransitionEffect from "@/components/TransitionEffect";
 
 type Props = {};
 
 export default function About({}: Props) {
   return (
     <main className={"w-full"}>
+      <TransitionEffect />
       <Container classname={"py-8"}>
         <AnimatedText text={"Passion Fuels Purpose!"} classname={"py-8"} />
         <section className={"flex gap-24 flex-col lg:flex-row"}>
@@ -35,7 +37,7 @@ export default function About({}: Props) {
           </div>
           <div className={"lg:w-2/4 h-max -order-1"}>
             <div
-              className={`relative h-fit w-fit rounded-2xl border-dark border bg-light p-6 ${HelperClasses.bg["bg-card"]}`}
+              className={`relative h-fit w-fit rounded-2xl p-6 bg-card mx-auto`}
             >
               <Image
                 src={"/images/profile/developer-pic-2.jpg"}

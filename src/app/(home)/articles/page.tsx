@@ -4,22 +4,25 @@ import Container from "@/components/Container";
 import Divider from "@/components/Divider";
 import NavigateButton from "@/components/NavigateButton";
 import SectionHeading from "@/components/SectionHeading";
+import TransitionEffect from "@/components/TransitionEffect";
 import { ArticlesData } from "@/utils/data";
-import HelperClasses from "@/utils/helperClasses";
 
 type Props = {};
 export default function Article({}: Props) {
   return (
     <main>
-      <Container classname={"py-8"}>
+      <TransitionEffect />
+      <Container classname={"py-8 dark:!text-light"}>
         <AnimatedText text={"Words Can Change The World!"} />
-        <div className={"grid grid-cols-12 gap-x-12 gap-y-10 py-12"}>
+        <div className={"flex md:gap-x-8 gap-y-10 py-12 flex-wrap"}>
           {ArticlesData.map((article) => {
-            return (
+            return article.type !== "featured" ? undefined : (
               <ArticleCard
                 key={article.id}
                 {...article}
-                classname={`${HelperClasses.bg["bg-card"]} col-span-12 md:col-span-6 rounded-lg border border-dark bg-light relative p-8`}
+                classname={
+                  "bg-card rounded-lg border relative p-8 grow min-w-[40%]"
+                }
               />
             );
           })}
@@ -30,15 +33,22 @@ export default function Article({}: Props) {
           <div>
             {ArticlesData.map((article) => (
               <div
-                className={`${HelperClasses.bg["bg-card"]} bg-light relative p-6 rounded-lg after:!left-0 my-6 flex items-center gap-6 border border-dark`}
+                className={`bg-card relative p-6 rounded-lg my-6 flex flex-col md:flex-row items-center gap-6`}
               >
                 <NavigateButton
                   path={article.link}
-                  classname={"!p-0 hover:underline text-lg"}
+                  target={"_blank"}
+                  classname={
+                    "!p-0 text-lg !bg-transparent !text-dark dark:!text-light"
+                  }
                 >
                   <p>{article.description}</p>
                 </NavigateButton>
-                <span className={"min-w-fit text-primary font-semibold"}>
+                <span
+                  className={
+                    "min-w-fit text-primary dark:text-primaryDark font-semibold"
+                  }
+                >
                   {article.time}
                 </span>
               </div>

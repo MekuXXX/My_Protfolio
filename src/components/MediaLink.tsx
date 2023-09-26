@@ -1,21 +1,23 @@
-"use client";
-import { motion } from "framer-motion";
 import { ReactNode } from "react";
+import NavigateButton from "./NavigateButton";
 
 type Props = {
   path: string;
+  classname?: string;
   icon: ReactNode;
 };
 
-export default function MediaLink({ icon, path }: Props) {
+export default function MediaLink({ icon, path, classname }: Props) {
   return (
-    <motion.a
-      href={path}
+    <NavigateButton
+      path={path}
       target={"_blank"}
-      whileHover={{ y: -4, scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
+      classname={
+        "!p-0 !bg-transparent transition duration-main hover:scale-[1.1] hover:-translate-y-2 " +
+        classname
+      }
     >
       {icon}
-    </motion.a>
+    </NavigateButton>
   );
 }

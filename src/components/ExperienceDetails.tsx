@@ -22,13 +22,19 @@ export default function ExperienceDetails({
           {placeLink ? (
             <a
               href={newCompLink}
-              className={"uppercase text-primary text-[1.25rem]"}
+              className={
+                "uppercase text-primary dark:text-primaryDark text-[1.25rem]"
+              }
             >
               @{place}
             </a>
           ) : undefined}
         </h3>
-        <p className={"font-medium text-dark/75 capitalize my-1"}>
+        <p
+          className={
+            "text-sm text-dark/75 dark:text-light/75 capitalize my-1.5"
+          }
+        >
           {time} | {address}
         </p>
         <p className={"w-full"}>{body}</p>

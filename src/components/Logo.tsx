@@ -7,9 +7,9 @@ const MotionLink = motion(Link);
 
 export default function Logo({}: Props) {
   return (
-    <motion.div className="flex items-center justify-center mt-2">
+    <div className="flex items-center justify-center mt-2">
       <MotionLink
-        href={"href"}
+        href={"/"}
         whileHover={{
           backgroundColor: [
             "#121212",
@@ -22,11 +22,11 @@ export default function Logo({}: Props) {
           transition: { duration: 1.25, repeat: Infinity },
         }}
         className={
-          "text-light bg-dark flex items-center justify-center rounded-full text-2xl py-4 px-3.5"
+          "text-light bg-dark flex items-center justify-center rounded-full text-2xl py-4 px-3.5 border border-transparent dark:border-light"
         }
       >
         MX
       </MotionLink>
-    </motion.div>
+    </div>
   );
 }

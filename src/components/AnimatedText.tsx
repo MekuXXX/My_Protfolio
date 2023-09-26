@@ -35,7 +35,7 @@ export default function AnimatedText({ text, classname }: Props) {
           delay: 0.5,
           staggerChildren: 0.08,
         }}
-        className={`inline-block w-full text-dark font-extrabold capitalize text-4xl md:text-6xl ${classname}`}
+        className={`inline-block w-full text-dark dark:text-light font-extrabold capitalize text-4xl md:text-6xl ${classname}`}
       >
         {text.split(" ").map((word, ind) => (
           <motion.span

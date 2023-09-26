@@ -9,10 +9,23 @@ export default function AllMediaLinks({ classname }: Props) {
     <nav
       className={`flex justify-center items-center flex-wrap gap-4 ${classname}`}
     >
-      <MediaLink path="/" icon={<GithubIcon width={"25"} height={"25"} />} />
+      <MediaLink
+        path="/"
+        icon={<GithubIcon width={"25"} height={"25"} />}
+        classname={"!text-dark dark:!text-light"}
+      />
       <MediaLink path="/" icon={<LinkedinIcon width={"25"} height={"25"} />} />
       <MediaLink path="/" icon={<TwitterIcon width={"25"} height={"25"} />} />
-      <MediaLink path="/" icon={<PinterestIcon width={"25"} height={"25"} />} />
+      <MediaLink
+        path="/"
+        icon={
+          <PinterestIcon
+            width={"25"}
+            height={"25"}
+            className={"bg-light rounded-[50%]"}
+          />
+        }
+      />
     </nav>
   );
 }

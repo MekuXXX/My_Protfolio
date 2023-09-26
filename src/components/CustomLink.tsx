@@ -14,7 +14,7 @@ export default function CustomLink({ path, title }: Props) {
       <span
         className={`
           ${pathname === path ? "w-full" : "w-0"}
-          h-0.5 inline-block bg-dark absolute left-0 -bottom-1.5 group-hover:w-full transition-[width] ease duration-300
+          h-0.5 inline-block bg-dark dark:bg-light absolute left-0 -bottom-1.5 group-hover:w-full transition-[width] ease duration-300
         `}
       ></span>
     </Link>

@@ -14,7 +14,7 @@ export default function LiIcon({}: Props) {
           cx={"75"}
           cy={"50"}
           r={"10"}
-          className={"animate-pulse fill-primary"}
+          className={"animate-pulse fill-primary dark:fill-primaryDark"}
         />
       </svg>
     </figure>

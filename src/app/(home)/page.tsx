@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main
       className={
-        "flex dark:!bg-dark dark:!text-light items-center w-full h-auto min-h-screen"
+        "flex h-auto min-h-screen w-full items-center dark:!bg-dark dark:!text-light"
       }
     >
       <TransitionEffect />
@@ -26,10 +26,10 @@ export default function Home() {
             alt={"Mohamed Ali"}
             width={590}
             height={590}
-            className="w-full h-auto"
+            className="h-auto w-full"
           />
         </div>
-        <div className={"w-full lg:w-1/2 text-center lg:text-left"}>
+        <div className={"w-full text-center lg:w-1/2 lg:text-left"}>
           <AnimatedText
             text={"Turning Vision Into Reality With Code And Design."}
           />
@@ -41,7 +41,7 @@ export default function Home() {
           <div>
             <div
               className={
-                "flex items-center justify-center lg:justify-start self-start gap-2"
+                "flex items-center justify-center gap-2 self-start lg:justify-start"
               }
             >
               <NavigateButton
@@ -65,13 +65,13 @@ export default function Home() {
           </div>
         </div>
         {/* <HireMe /> */}
-        <div className={"absolute right-8 bottom-8 hidden lg:inline-block"}>
-          <div className={"relative w-32 h-32"}>
+        <div className={"absolute bottom-8 right-8 hidden lg:inline-block"}>
+          <div className={"relative h-32 w-32"}>
             <Image
               src={"/images/svgs/miscellaneous_icons_1.svg"}
               alt={"Bulb"}
               fill={true}
-              className={"w-full h-auto object-contain"}
+              className={"h-auto w-full object-contain"}
             />
           </div>
         </div>

@@ -25,7 +25,7 @@ export default function AnimatedText({ text, classname }: Props) {
   return (
     <div
       className={
-        "w-full mx-auto py-2 flex items-center justify-center text-center"
+        "mx-auto flex w-full items-center justify-center py-2 text-center"
       }
     >
       <motion.h1
@@ -35,7 +35,7 @@ export default function AnimatedText({ text, classname }: Props) {
           delay: 0.5,
           staggerChildren: 0.08,
         }}
-        className={`inline-block w-full text-dark dark:text-light font-extrabold capitalize text-4xl md:text-6xl ${classname}`}
+        className={`inline-block w-full text-4xl font-extrabold capitalize text-dark dark:text-light md:text-6xl ${classname}`}
       >
         {text.split(" ").map((word, ind) => (
           <motion.span

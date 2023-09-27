@@ -12,7 +12,7 @@ export default function Navbar({}: Props) {
       <Container classname={"py-2 flex items-center font-medium gap-4"}>
         <div
           className={
-            "flex justify-end flex-row-reverse md:flex-row md:justify-between items-center flex-grow gap-2"
+            "flex flex-grow flex-row-reverse items-center justify-end gap-2 md:flex-row md:justify-between"
           }
         >
           <nav>

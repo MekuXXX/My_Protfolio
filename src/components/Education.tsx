@@ -8,7 +8,7 @@ export default function Education({}: Props) {
   return (
     <section>
       <SectionHeading text={"Education"} />
-      <div className={"w-[70%] mx-auto relative"}>
+      <div className={"relative mx-auto w-[70%]"}>
         <div className={"side-line"} />
         <ul className={"py-12"}>
           {EducationData.map((ex, ind) => (

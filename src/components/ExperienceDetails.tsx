@@ -16,14 +16,14 @@ export default function ExperienceDetails({
   return (
     <li>
       <LiIcon />
-      <div className={"w-[85%] ms-auto"}>
-        <h3 className={"font-bold text-2xl capitalize"}>
+      <div className={"ms-auto w-[85%]"}>
+        <h3 className={"text-2xl font-bold capitalize"}>
           {title}&nbsp;
           {placeLink ? (
             <a
               href={newCompLink}
               className={
-                "uppercase text-primary dark:text-primaryDark text-[1.25rem]"
+                "text-[1.25rem] uppercase text-primary dark:text-primaryDark"
               }
             >
               @{place}
@@ -32,7 +32,7 @@ export default function ExperienceDetails({
         </h3>
         <p
           className={
-            "text-sm text-dark/75 dark:text-light/75 capitalize my-1.5"
+            "my-1.5 text-sm capitalize text-dark/75 dark:text-light/75"
           }
         >
           {time} | {address}

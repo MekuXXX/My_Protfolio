@@ -10,12 +10,12 @@ export default function TransitionEffect({}: Props) {
         animate={{ width: "0%" }}
         transition={{ duration: 1 }}
         className={
-          "fixed w-screen h-screen left-0 bottom-0 right-full z-10 bg-primary dark:bg-primaryDark"
+          "fixed bottom-0 left-0 right-full z-10 h-screen w-screen bg-primary dark:bg-primaryDark"
         }
       />
       <motion.div
         className={
-          "fixed w-screen h-screen left-0 bottom-0 z-30 bg-dark dark:bg-light"
+          "fixed bottom-0 left-0 z-30 h-screen w-screen bg-dark dark:bg-light"
         }
         initial={{ x: "100%", width: "100%" }}
         animate={{ x: "0%", width: "0%" }}
@@ -24,7 +24,7 @@ export default function TransitionEffect({}: Props) {
       />
       <motion.div
         className={
-          "fixed w-screen h-screen left-0 bottom-0 z-20 bg-slate-600 dark:bg-slate-300"
+          "fixed bottom-0 left-0 z-20 h-screen w-screen bg-slate-600 dark:bg-slate-300"
         }
         initial={{ x: "100%", width: "100%" }}
         animate={{ x: "0%", width: "0%" }}

@@ -36,7 +36,7 @@ export default function ArticleCard({
           />
         </NavigateButton>
       </div>
-      <div className={"pt-8 min-h-[12rem] flex flex-col justify-between"}>
+      <div className={"flex min-h-[12rem] flex-col justify-between pt-8"}>
         <NavigateButton
           path={link}
           text={title}
@@ -46,7 +46,7 @@ export default function ArticleCard({
           }
         />
         <p className={"py-4 text-dark/75 dark:text-light/75"}>{description}</p>
-        <div className={"flex justify-between items-center"}>
+        <div className={"flex items-center justify-between"}>
           <span className={"text-xl text-primary dark:text-primaryDark"}>
             {willTake} read
           </span>

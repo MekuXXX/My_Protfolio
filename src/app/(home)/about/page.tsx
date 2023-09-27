@@ -19,10 +19,10 @@ export default function About({}: Props) {
       <TransitionEffect />
       <Container classname={"py-8"}>
         <AnimatedText text={"Passion Fuels Purpose!"} classname={"py-8"} />
-        <section className={"flex gap-24 flex-col lg:flex-row"}>
+        <section className={"flex flex-col gap-24 lg:flex-row"}>
           <div
             className={
-              "lg:w-[37.5%] flex flex-col items-start justify-start lg:-order-2"
+              "flex flex-col items-start justify-start lg:-order-2 lg:w-[37.5%]"
             }
           >
             <SectionHeading
@@ -30,14 +30,14 @@ export default function About({}: Props) {
               classname={"text-start text-dark/75"}
             />
             {Bio.map((body, ind) => (
-              <p key={ind} className={"font-medium my-2"}>
+              <p key={ind} className={"my-2 font-medium"}>
                 {body}
               </p>
             ))}
           </div>
-          <div className={"lg:w-2/4 h-max -order-1"}>
+          <div className={"-order-1 h-max lg:w-2/4"}>
             <div
-              className={`relative h-fit w-fit rounded-2xl p-6 bg-card mx-auto`}
+              className={`bg-card relative mx-auto h-fit w-fit rounded-2xl p-6`}
             >
               <Image
                 src={"/images/profile/developer-pic-2.jpg"}
@@ -49,7 +49,7 @@ export default function About({}: Props) {
             </div>
           </div>
           <div
-            className={"lg:w-[12.5%] flex justify-between gap-3 lg:flex-col"}
+            className={"flex justify-between gap-3 lg:w-[12.5%] lg:flex-col"}
           >
             {AboutStats.map(({ stats, name }) => (
               <div

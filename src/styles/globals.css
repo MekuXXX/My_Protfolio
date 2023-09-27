@@ -14,7 +14,6 @@
   }
   .other-container {
     @apply bg-light dark:bg-dark flex-center min-h-[79vh] md:min-h-[85vh];
-    min-height: ;
   }
 }
 

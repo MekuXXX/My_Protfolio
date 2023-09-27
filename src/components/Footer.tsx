@@ -12,7 +12,7 @@ export default function Footer({}: Props) {
         </div>
         <div className={"flex items-center gap-1"}>
           Build With{" "}
-          <span className="text-primary dark:text-primaryDark text-2xl font-black">
+          <span className="text-2xl font-black text-primary dark:text-primaryDark">
             &#9825;
           </span>{" "}
           <span className="text-lg font-medium">Mohamed Ali</span>

@@ -4,11 +4,11 @@ import NavigateButton from "./NavigateButton";
 type Props = {};
 export default function HireMe({}: Props) {
   return (
-    <div className={"w-48 h-48 flex items-center relative justify-between"}>
+    <div className={"relative flex h-48 w-48 items-center justify-between"}>
       <CircularText
         width={"160"}
         height={"160"}
-        className={"fill-dark animate-spin-slow dark:!text-light"}
+        className={"animate-spin-slow fill-dark dark:!text-light"}
       />
       <NavigateButton
         path={"tomail:mmm@gmail.com"}

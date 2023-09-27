@@ -9,13 +9,13 @@ type Props = {
 };
 export default function ProjectsView({ array }: Props) {
   return (
-    <section className={"grid grid-cols-12 gap-y-12 md:gap-x-16 w-full"}>
+    <section className={"grid w-full grid-cols-12 gap-y-12 md:gap-x-16"}>
       {array.map((project, ind) => (
         <div
           key={ind}
-          className={`col-span-12 bg-card
+          className={`bg-card col-span-12
             ${ind !== 0 ? "md:col-span-6" : "md:gap-x-12"} 
-            grid grid-cols-12 rounded-xl p-6 gap-4`}
+            grid grid-cols-12 gap-4 rounded-xl p-6`}
         >
           {/* Project Card Image*/}
           <div
@@ -37,7 +37,7 @@ export default function ProjectsView({ array }: Props) {
           <div
             className={`col-span-12 ${
               ind === 0 ? "md:col-span-6 md:justify-between" : undefined
-            } pt-6 flex flex-col gap-3 md:gap-y-6 w-full`}
+            } flex w-full flex-col gap-3 pt-6 md:gap-y-6`}
           >
             <div>
               <p className={"text-primary dark:text-primaryDark"}>
@@ -58,7 +58,7 @@ export default function ProjectsView({ array }: Props) {
               ) : undefined}
             </div>
             <div
-              className={`flex justify-between items-center gap-6 ${
+              className={`flex items-center justify-between gap-6 ${
                 ind === 0 ? "!justify-start" : undefined
               } items-center text-[1.25rem]`}
             >
@@ -70,7 +70,7 @@ export default function ProjectsView({ array }: Props) {
                 <GithubIcon
                   width={"2rem"}
                   className={
-                    "transition duration-main inline-block text-dark/80 hover:text-dark dark:text-light/80 dark:hover:text-light text-8xl"
+                    "inline-block text-8xl text-dark/80 transition duration-main hover:text-dark dark:text-light/80 dark:hover:text-light"
                   }
                 />
               </NavigateButton>

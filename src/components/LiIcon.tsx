@@ -7,7 +7,7 @@ export default function LiIcon({}: Props) {
           cx={"75"}
           cy={"50"}
           r={"20"}
-          className={"stroke-primary stroke-1 fill-none"}
+          className={"fill-none stroke-primary stroke-1"}
         />
         <circle cx={"75"} cy={"50"} r={"20"} className={"fill-light"} />
         <circle

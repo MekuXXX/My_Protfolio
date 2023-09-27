@@ -9,12 +9,12 @@ type Props = {
 export default function CustomLink({ path, title }: Props) {
   const pathname = usePathname();
   return (
-    <Link href={path} className={"mr-4 relative group"}>
+    <Link href={path} className={"group relative mr-4"}>
       {title}
       <span
         className={`
           ${pathname === path ? "w-full" : "w-0"}
-          h-0.5 inline-block bg-dark dark:bg-light absolute left-0 -bottom-1.5 group-hover:w-full transition-[width] ease duration-300
+          ease absolute -bottom-1.5 left-0 inline-block h-0.5 bg-dark transition-[width] duration-300 group-hover:w-full dark:bg-light
         `}
       ></span>
     </Link>

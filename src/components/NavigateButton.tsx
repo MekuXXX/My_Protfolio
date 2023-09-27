@@ -23,7 +23,7 @@ export default function NavigateButton({
   return (
     <Link
       href={path}
-      className={`flex items-center justify-center transition duration-main py-2.5 px-6 rounded-lg bg-dark dark:bg-white text-light dark:text-dark hover:bg-light dark:hover:bg-dark hover:text-dark dark:hover:text-light hover:underline underline-offset-2 ${classname}`}
+      className={`flex items-center justify-center rounded-lg bg-dark px-6 py-2.5 text-light underline-offset-2 transition duration-main hover:bg-light hover:text-dark hover:underline dark:bg-white dark:text-dark dark:hover:bg-dark dark:hover:text-light ${classname}`}
       target={target ? target : "_self"}
       download={download ? download : false}
     >

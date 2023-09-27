@@ -7,7 +7,7 @@ type Props = {
 export default function AllMediaLinks({ classname }: Props) {
   return (
     <nav
-      className={`flex justify-center items-center flex-wrap gap-4 ${classname}`}
+      className={`flex flex-wrap items-center justify-center gap-4 ${classname}`}
     >
       <MediaLink
         path="/"
@@ -22,7 +22,7 @@ export default function AllMediaLinks({ classname }: Props) {
           <PinterestIcon
             width={"25"}
             height={"25"}
-            className={"bg-light rounded-[50%]"}
+            className={"rounded-[50%] bg-light"}
           />
         }
       />

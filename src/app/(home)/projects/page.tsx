@@ -6,11 +6,8 @@ import SectionHeading from "@/components/SectionHeading";
 import TransitionEffect from "@/components/TransitionEffect";
 import { Projects as PRS } from "@/utils/data";
 type Props = {};
-export default async function Projects({}: Props) {
-  // sleep function
-  const sleep = (ms: number) =>
-    new Promise((resolve) => setTimeout(resolve, ms));
 
+export default function Projects({}: Props) {
   return (
     <main>
       <TransitionEffect />

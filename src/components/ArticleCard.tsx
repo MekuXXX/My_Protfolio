@@ -1,6 +1,5 @@
 import { ArticlesCardType } from "@/utils/data";
 import Image from "next/image";
-import SectionHeading from "./SectionHeading";
 import NavigateButton from "./NavigateButton";
 
 type Props = ArticlesCardType & {
@@ -19,7 +18,7 @@ export default function ArticleCard({
     <div className={classname}>
       <div
         className={
-          "relative min-h-[16rem] cursor-pointer overflow-hidden rounded-lg"
+          "relative min-h-[18rem] cursor-pointer overflow-hidden rounded-lg"
         }
       >
         <NavigateButton

@@ -125,16 +125,15 @@ export const EducationData: ExperienceDataType[] = [
 export type ProjectArrayType = {
   id: number;
   image: string;
-  type: string;
+  type: string | "Featured Project";
   title: string;
   description?: string;
   link: string;
   github?: string;
-}[];
+};
 
 export const Projects: ProjectArrayType[] = 
 [
-  [
     {
       id: 1,
       image: "/images/projects/crypto-screener-cover-image.jpg",
@@ -160,10 +159,8 @@ export const Projects: ProjectArrayType[] =
       link: "https://codebucks.netlify.app/",
       github: "https://github.com/codebucks/codebucks"
     },
-  ],
-  [
     {
-      id: 1,
+      id: 4,
       image: "/images/projects/crypto-screener-cover-image.jpg",
       type: "Featured Project",
       title: "Crypto Screener Application",
@@ -172,7 +169,7 @@ export const Projects: ProjectArrayType[] =
       github: "https://github.com/codebucks/codebucks"
     },
     {
-      id: 2,
+      id: 5,
       image: "/images/projects/nft-collection-website-cover-image.jpg",
       type: "Website Template",
       title: "NFT collection Website",
@@ -180,14 +177,22 @@ export const Projects: ProjectArrayType[] =
       github: "https://github.com/codebucks/codebucks"
     },
     {
-      id: 3,
+      id: 6,
       type: "Website",
       image: "/images/projects/portfolio-cover-image.jpg",
       title: "Fashion Studio Website",
       link: "https://codebucks.netlify.app/",
       github: "https://github.com/codebucks/codebucks"
     },
-  ],
+    {
+      id: 7,
+      image: "/images/projects/crypto-screener-cover-image.jpg",
+      type: "Featured Project",
+      title: "Crypto Screener Application",
+      description: "CodeBucks is a web application that allows users to create and share short-form video content, including designing and implementing a new user interface and developing the backend infrastructure to support the feature.",
+      link: "https://codebucks.netlify.app/",
+      github: "https://github.com/codebucks/codebucks"
+    },
 ]
 
 // Articles
@@ -225,7 +230,7 @@ export const ArticlesData: ArticlesCardType[] = [
   },
   {
     id: 3,
-    type: "featured",
+    type: "normal",
     image: "/images/projects/crypto-screener-cover-image.jpg",
     title: "Crypto Screener Application",
     description: "Learn how to build a custom pagination component in ReactJS from scratch. Follow this step-by-step guide to integrate Pagination component in your ReactJS project.",

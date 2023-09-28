@@ -7,7 +7,7 @@ const MotionLink = motion(Link);
 
 export default function Logo({}: Props) {
   return (
-    <div className="mt-2 flex items-center justify-center">
+    <div className="mt-2 flex select-none items-center justify-center">
       <MotionLink
         href={"/"}
         whileHover={{

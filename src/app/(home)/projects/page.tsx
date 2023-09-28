@@ -21,7 +21,7 @@ export default function Projects({}: Props) {
           {refinedProject.map((projectArray, ind) => (
             <>
               <ProjectsView key={ind} array={projectArray} />
-              {ind !== PRS.length - 1 ? <Divider /> : undefined}
+              {ind !== refinedProject.length - 1 ? <Divider /> : undefined}
             </>
           ))}
         </div>

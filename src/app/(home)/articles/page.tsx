@@ -10,7 +10,7 @@ import { ArticlesData } from "@/utils/data";
 type Props = {};
 export default function Article({}: Props) {
   const featuredArticle = ArticlesData.filter(
-    (article) => article.type === "featured"
+    (article) => article.type === "featured",
   );
   return (
     <main>
@@ -19,7 +19,7 @@ export default function Article({}: Props) {
         <AnimatedText text={"Words Can Change The World!"} />
         <div
           className={
-            "grid grid-cols-1 md:grid-cols-2 md:gap-x-8 gap-y-10 py-12"
+            "grid grid-cols-1 gap-y-10 py-12 md:grid-cols-2 md:gap-x-8"
           }
         >
           {featuredArticle.map((article, ind) => {
@@ -44,7 +44,8 @@ export default function Article({}: Props) {
           <div>
             {ArticlesData.map((article) => (
               <div
-                className={`bg-card relative p-6 rounded-lg my-6 flex flex-col md:flex-row items-center gap-6`}
+                key={article.id}
+                className={`bg-card relative my-6 flex flex-col items-center gap-6 rounded-lg p-6 md:flex-row`}
               >
                 <NavigateButton
                   path={article.link}
@@ -57,7 +58,7 @@ export default function Article({}: Props) {
                 </NavigateButton>
                 <span
                   className={
-                    "min-w-fit text-primary dark:text-primaryDark font-semibold"
+                    "min-w-fit font-semibold text-primary dark:text-primaryDark"
                   }
                 >
                   {article.time}

@@ -157,7 +157,7 @@ export const Projects: ProjectType[] = [
   {
     id: 4,
     image: '/images/projects/crypto-screener-cover-image.jpg',
-    type: 'Featured Project',
+    type: 'Project',
     title: 'Crypto Screener Application',
     description:
       'CodeBucks is a web application that allows users to create and share short-form video content, including designing and implementing a new user interface and developing the backend infrastructure to support the feature.',
@@ -177,6 +177,16 @@ export const Projects: ProjectType[] = [
     type: 'Website',
     image: '/images/projects/portfolio-cover-image.jpg',
     title: 'Fashion Studio Website',
+    link: 'https://codebucks.netlify.app/',
+    github: 'https://github.com/codebucks/codebucks',
+  },
+  {
+    id: 7,
+    image: '/images/projects/crypto-screener-cover-image.jpg',
+    type: 'Featured Project',
+    title: 'Crypto Screener Application',
+    description:
+      'CodeBucks is a web application that allows users to create and share short-form video content, including designing and implementing a new user interface and developing the backend infrastructure to support the feature.',
     link: 'https://codebucks.netlify.app/',
     github: 'https://github.com/codebucks/codebucks',
   },

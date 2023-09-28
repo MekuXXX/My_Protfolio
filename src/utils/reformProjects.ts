@@ -7,7 +7,7 @@ export function ReformProjectArray(projects: ProjectType[]): ProjectType[][] {
 
   // Iterate over the projects array and add each project to the appropriate array.
   for (const project of projects) {
-    if (project.type === 'Featured Project') {
+    if (project.type.split(" ")[0].toLowerCase() === 'featured') {
       featuredProject.push(project);
     } else {
       otherProjects.push(project);

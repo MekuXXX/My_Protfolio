@@ -1,7 +1,7 @@
 "use client";
 
 import useTheme from "@/hooks/useTheme";
-import { HeroiconsSolidMoon, HeroiconsSolidSun } from "./Icons";
+import { IconamoonModeDarkFill, HeroiconsSolidSun } from "./Icons";
 
 type Props = {};
 
@@ -20,7 +20,7 @@ export default function ModeChanger({}: Props) {
           className={"ml-[-0.5rem] text-2xl text-yellow-500 md:ml-0"}
         />
       ) : (
-        <HeroiconsSolidMoon
+        <IconamoonModeDarkFill
           className={"ml-[-0.5rem] rotate-[-90deg] text-2xl md:ml-0"}
         />
       )}

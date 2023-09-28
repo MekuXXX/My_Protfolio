@@ -14,9 +14,8 @@ const SingleWordVariant = {
   visible: {
     opacity: 1,
     y: 0,
-    tranision: {
-      delay: 0.5,
-      duration: 0.5,
+    transition: {
+      staggerChildren: 0.08,
     },
   },
 };
@@ -29,17 +28,18 @@ export default function AnimatedText({ text, classname }: Props) {
       }
     >
       <motion.h1
+        variants={SingleWordVariant}
         initial={"hidden"}
         animate={"visible"}
-        transition={{
-          delay: 0.5,
-          staggerChildren: 0.08,
-        }}
         className={`inline-block w-full text-4xl font-extrabold capitalize text-dark dark:text-light md:text-6xl ${classname}`}
       >
         {text.split(" ").map((word, ind) => (
           <motion.span
             variants={SingleWordVariant}
+            transition={{
+              delay: 0.5,
+              duration: 0.5,
+            }}
             key={word + "-" + ind}
             className={"inline-block"}
           >

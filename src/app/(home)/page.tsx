@@ -26,7 +26,7 @@ export default function Home() {
             alt={"Mohamed Ali"}
             width={590}
             height={590}
-            className="h-auto w-full"
+            priority
           />
         </div>
         <div className={"w-full text-center lg:w-1/2 lg:text-left"}>

@@ -22,17 +22,19 @@ export default function ProjectsView({ array }: Props) {
           >
             {/* Project Card Image*/}
             <div
-              className={`col-span-12 min-h-[20rem]
-              ${checkFeature ? "md:!col-span-6 md:min-h-[22rem]" : ""} 
+              className={`relative col-span-12 aspect-square
+              ${checkFeature ? "md:!col-span-6" : ""} 
               relative overflow-hidden rounded-xl`}
             >
               <Image
                 src={project.image}
                 alt={project.title}
-                fill={true}
+                sizes={"(min-width: 808px) 50vw, 100vw"}
                 className={
-                  "object-fit bg-center transition duration-main hover:scale-[1.075]"
+                  "object-fill transition duration-main hover:scale-[1.075]"
                 }
+                fill
+                priority
               />
             </div>
 

@@ -1,7 +1,7 @@
 type Props = {};
 export default function LiIcon({}: Props) {
   return (
-    <figure className={"absolute -left-[3.35rem] stroke-dark"}>
+    <figure className={"absolute -left-[3.38rem] stroke-dark"}>
       <svg width={"75"} height={"75"} viewBox={"0 0 100 100"}>
         <circle
           cx={"75"}

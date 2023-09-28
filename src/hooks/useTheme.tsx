@@ -3,7 +3,9 @@ import { useEffect, useState } from "react";
 export type Mode = "dark" | "light";
 
 const useTheme = () => {
-  if (typeof window !== "undefined") {
+  const [mode, setMode] = useState<Mode | undefined>();
+
+  useEffect(() => {
     const localTheme = window.localStorage.getItem("my-theme");
     const matchMedia = window.matchMedia("(prefers-color-scheme: dark)");
     const checkedMode =
@@ -14,19 +16,19 @@ const useTheme = () => {
         : matchMedia
         ? "dark"
         : "light";
-    const [mode, setMode] = useState<Mode>(checkedMode);
+    setMode(checkedMode);
+  }, []);
 
-    useEffect(() => {
+  useEffect(() => {
+    if (mode) {
       window.localStorage.setItem("my-theme", mode);
       mode === "dark"
         ? document.documentElement.classList.add("dark")
         : document.documentElement.classList.remove("dark");
-    }, [mode]);
+    }
+  }, [mode]);
 
-    return { mode, setMode };
-  } else {
-    return { mode: "dark", setMode: () => {} };
-  }
+  return { mode, setMode };
 };
 
 export default useTheme;

@@ -16,23 +16,21 @@ export default function ArticleCard({
 }: Props) {
   return (
     <div className={classname}>
-      <div
-        className={
-          "relative min-h-[18rem] cursor-pointer overflow-hidden rounded-lg"
-        }
-      >
+      <div className={"cursor-pointer overflow-hidden rounded-xl"}>
         <NavigateButton
           path={link}
           target={"_blank"}
-          classname={"!py-0 cursor-pointer"}
+          classname={"relative !p-0 cursor-pointer aspect-square"}
         >
           <Image
             src={image}
             alt={title}
-            fill={true}
             className={
               "object-fill transition duration-main hover:scale-[1.075]"
             }
+            sizes={"(min-width: 808px) 50vw, 100vw"}
+            fill
+            priority
           />
         </NavigateButton>
       </div>

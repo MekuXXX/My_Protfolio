@@ -28,7 +28,8 @@ const config: Config = {
         main: '0.3s'
       },
       animation: {
-        'spin-slow': 'spin 10s linear infinite'
+        'spin-slow': 'spin 10s linear infinite',
+        'bounce-once': 'pulse 1s linear 3',
       }
     },
   },

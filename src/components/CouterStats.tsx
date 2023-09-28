@@ -6,7 +6,6 @@ import { useEffect, useRef } from "react";
 type Props = { stats: number };
 export default function CouterStats({ stats }: Props) {
   const ref = useRef(null);
-  // const counter = useRef(0);
   const start = useMotionValue(0);
   const spring = useSpring(start, { duration: 3000 });
   const isInView = useInView(ref, { once: true });

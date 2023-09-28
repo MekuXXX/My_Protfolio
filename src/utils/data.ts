@@ -20,6 +20,9 @@ export const Bio: string[] = [
     `,
 ];
 
+
+// About 
+
 export type StatsType = {
   stats: number;
   name: string;
@@ -30,6 +33,53 @@ export const AboutStats: StatsType[] = [
   { stats: 40, name: 'Project Completed' },
   { stats: 9, name: 'Years of experience' },
 ];
+
+export type Skill = {
+  id: number;
+  name: string;
+  progress: number;
+  experience: "Junior" | "Intermediate" | "Senior" | "Expert" ;
+}
+
+
+export const AboutSkills: Skill[] = [
+  {
+    id: 1,
+    name: 'HTML',
+    progress: 90,
+    experience: "Senior"
+  },
+  {
+    id: 2,
+    name: 'CSS',
+    progress: 40,
+    experience: "Intermediate"
+  },
+  {
+    id: 3,
+    name: 'Javascript & NodeJS',
+    progress: 85,
+    experience: "Expert"
+  },
+  {
+    id: 4,
+    name: 'MongoDB',
+    progress: 60,
+    experience: "Intermediate"
+  },
+  {
+    id: 5,
+    name: 'ReactJS & NextJS',
+    progress: 95,
+    experience: "Intermediate"
+  },
+  {
+    id: 6,
+    name: 'Python',
+    progress: 75,
+    experience: "Junior"
+  },
+]
 
 export type ExperienceDataType = {
   id: number;

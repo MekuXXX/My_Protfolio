@@ -5,7 +5,7 @@ import { LinkArrow } from "@/components/Icons";
 import NavigateButton from "@/components/NavigateButton";
 import TransitionEffect from "@/components/TransitionEffect";
 import Image from "next/image";
-import Link from "next/link";
+import { HomeData } from "@/utils/data";
 
 export default function Home() {
   return (
@@ -22,7 +22,7 @@ export default function Home() {
       >
         <div className={"w-3/4 lg:w-1/2"}>
           <Image
-            src={"/images/profile/developer-pic-1.png"}
+            src={HomeData.image}
             alt={"Mohamed Ali"}
             width={590}
             height={590}
@@ -30,14 +30,8 @@ export default function Home() {
           />
         </div>
         <div className={"w-full text-center lg:w-1/2 lg:text-left"}>
-          <AnimatedText
-            text={"Turning Vision Into Reality With Code And Design."}
-          />
-          <p className="my-4 text-base font-medium">
-            As a skilled full-stack developer, I am dedicated to turning ideas
-            into innovative web applications. Explore my latest projects and
-            articles, showcasing my expertise in React.js and web development.
-          </p>
+          <AnimatedText text={HomeData.mainTitle} classname={"!text-start"} />
+          <p className="my-4 text-base font-medium">{HomeData.paragraph}</p>
           <div>
             <div
               className={

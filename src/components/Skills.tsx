@@ -1,6 +1,6 @@
 import ProgressBar from "./ProgressBar";
 import SectionHeading from "./SectionHeading";
-import { AboutSkills } from "@/utils/data";
+import { AboutData } from "@/utils/data";
 
 type Props = {};
 export function Skills({}: Props) {
@@ -8,7 +8,7 @@ export function Skills({}: Props) {
     <div className="flex flex-col">
       <SectionHeading classname="text-3xl font-bold" text={"Skills"} />
       <ul className="mt-6 flex flex-col gap-8">
-        {AboutSkills.map((skill) => {
+        {AboutData.skills.map((skill) => {
           return (
             <li className="mb-2 flex flex-col" key={skill.id}>
               <div className="mb-2 h-4 w-full rounded-full bg-[#ccc]">

@@ -1,4 +1,39 @@
-export const Bio: string[] = [
+// Home
+export const HomeData = {
+  image: "/images/profile/developer-pic-1.png",
+  mainTitle: "Turning Vision Into Reality With Code And Design.",
+  paragraph: "As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications. Explore my latest projects and articles, showcasing my expertise in React.js and web development."
+}
+
+// About 
+export type ExperienceDataType = {
+  id: number;
+  title: string;
+  place: string;
+  placeLink?: string;
+  time: string;
+  address: string;
+  body: string;
+};
+export type AboutDataType = {
+  mainTitle: string,
+  bio: string[],
+  stats: {  
+    stats: number;
+    name: string;
+  }[],
+  skills: {
+  id: number;
+  name: string;
+  progress: number;
+  experience: "Junior" | "Intermediate" | "Senior" | "Expert" ;
+  }[],
+  experience: ExperienceDataType[],
+  education: ExperienceDataType[],
+};
+export const AboutData:AboutDataType = {
+  mainTitle: "Passion Fuels Purpose!",
+  bio: [
   `           
         Hi, I'm CodeBucks, a web developer and UI/UX designer with a         
         passion for creating beautiful, functional, and user-centered
@@ -18,31 +53,13 @@ export const Bio: string[] = [
         forward to the opportunity to bring my skills and passion to
         your next project.
     `,
-];
-
-
-// About 
-
-export type StatsType = {
-  stats: number;
-  name: string;
-};
-
-export const AboutStats: StatsType[] = [
-  { stats: 50, name: 'Satisfied Clients' },
-  { stats: 40, name: 'Project Completed' },
-  { stats: 9, name: 'Years of experience' },
-];
-
-export type Skill = {
-  id: number;
-  name: string;
-  progress: number;
-  experience: "Junior" | "Intermediate" | "Senior" | "Expert" ;
-}
-
-
-export const AboutSkills: Skill[] = [
+  ],
+  stats: [  
+    { stats: 50, name: 'Satisfied Clients' },
+    { stats: 40, name: 'Project Completed' },
+    { stats: 9, name: 'Years of experience' }
+  ],
+  skills: [
   {
     id: 1,
     name: 'HTML',
@@ -59,7 +76,7 @@ export const AboutSkills: Skill[] = [
     id: 3,
     name: 'Javascript & NodeJS',
     progress: 85,
-    experience: "Expert"
+    experience: "Intermediate"
   },
   {
     id: 4,
@@ -79,19 +96,8 @@ export const AboutSkills: Skill[] = [
     progress: 75,
     experience: "Junior"
   },
-]
-
-export type ExperienceDataType = {
-  id: number;
-  title: string;
-  place: string;
-  placeLink?: string;
-  time: string;
-  address: string;
-  body: string;
-};
-
-export const ExperienceData: ExperienceDataType[] = [
+  ],
+  experience: [
   {
     id: 1,
     title: 'Software Engineer',
@@ -128,9 +134,8 @@ export const ExperienceData: ExperienceDataType[] = [
     address: 'Massachusetts Ave, Cambridge, MA',
     body: 'Assisted in teaching a course on computer programming, held office hours to help students with assignments, and graded exams and assignments.',
   },
-];
-
-export const EducationData: ExperienceDataType[] = [
+  ],
+  education: [
   {
     id: 1,
     title: 'Software Engineer',
@@ -163,10 +168,10 @@ export const EducationData: ExperienceDataType[] = [
     address: 'Massachusetts Ave, Cambridge, MA',
     body: 'Assisted in teaching a course on computer programming, held office hours to help students with assignments, and graded exams and assignments.',
   },
-];
+  ]
+};
 
 // Projects
-
 export type ProjectType = {
   id: number;
   image: string;
@@ -176,7 +181,6 @@ export type ProjectType = {
   link: string;
   github?: string;
 };
-
 export const Projects: ProjectType[] = [
   {
     id: 1,
@@ -263,7 +267,6 @@ export type ArticlesCardType = {
   time: string;
   willTake: string;
 };
-
 export const ArticlesData: ArticlesCardType[] = [
   {
     id: 1,

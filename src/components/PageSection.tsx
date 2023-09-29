@@ -60,14 +60,14 @@ export default function PageSections({}: Props) {
             onClick={() => {
               setActive(false);
             }}
-            className={`group relative block w-full p-2 text-center transition duration-main hover:text-primary dark:hover:text-light md:py-0 ${
+            className={`group relative block w-full p-2 text-center md:py-0 ${
               ind !== pageSections.length - 1 && active ? "border-b" : undefined
             }`}
           >
             {section}
             {active ? undefined : (
               <span
-                className={`absolute -bottom-1.5 left-0 inline-block h-0.5 bg-primary transition-[width] duration-main ease-in-out group-hover:w-full dark:bg-primaryDark
+                className={`absolute -bottom-1.5 left-0 inline-block h-0.5 bg-dark transition-[width] duration-main ease-in-out group-hover:w-full dark:bg-light
             ${
               section.toLowerCase() === "home" && !isNaN(+pathname)
                 ? "w-full"

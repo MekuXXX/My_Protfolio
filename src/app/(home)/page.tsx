@@ -30,7 +30,10 @@ export default function Home() {
           />
         </div>
         <div className={"w-full text-center lg:w-1/2 lg:text-left"}>
-          <AnimatedText text={HomeData.mainTitle} classname={"!text-start"} />
+          <AnimatedText
+            text={HomeData.mainTitle}
+            classname={"lg:!text-start"}
+          />
           <p className="my-4 text-base font-medium">{HomeData.paragraph}</p>
           <div>
             <div

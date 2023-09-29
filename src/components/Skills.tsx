@@ -16,7 +16,9 @@ export function Skills({}: Props) {
               </div>
               <div className={"flex justify-between"}>
                 <span className="text-xl font-semibold">{skill.name}</span>
-                <span className="text-gray-600">{skill.experience}</span>
+                <span className="text-dark/75 dark:text-light/75">
+                  {skill.experience}
+                </span>
               </div>
             </li>
           );
